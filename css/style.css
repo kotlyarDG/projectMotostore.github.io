@@ -1826,9 +1826,6 @@ ul {
 	height: 60vh;
 }
 
-.content-about {
-	background: #E5E5E5;
-}
 .content-about__info {
 	padding: 70px 0 40px 0;
 	color: #393939;
@@ -2606,7 +2603,7 @@ ul {
 	display: inline-block;
 	width: 6px;
 	height: 10px;
-	background: url("../../img/stock/arrow-next.svg") center/cover no-repeat;
+	background: url("../img/stock/arrow-next.svg") center/cover no-repeat;
 	position: absolute;
 	top: 4px;
 	right: -15px;

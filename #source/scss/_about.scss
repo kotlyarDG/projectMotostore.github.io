@@ -6,7 +6,6 @@
 }
 
 .content-about {
-	background: #E5E5E5;
 
 	&__info {
 		padding: 70px 0 40px 0;
@@ -18,8 +17,6 @@
 		font-family: $boldFont;
 		font-weight: 800;
 		@include adaptive-font(54, 28);
-		// font-size: 54px;
-		// line-height: 59px;
 	}
 
 	&__subtittle {
