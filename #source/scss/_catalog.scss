@@ -38,6 +38,7 @@
   @media (max-width: $xs) {
     min-height: calc(100vh - 120px);
     padding-top: 0;
+    padding-bottom: 50px;
   }
 
   &__categories {
