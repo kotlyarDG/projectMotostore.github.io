@@ -1,0 +1,2933 @@
+@charset "UTF-8";
+@font-face {
+	font-family: "Century Gothic Regular";
+	src: url("../../fonts/CenturyGothic.eot");
+	src: url("../../fonts/CenturyGothic.eot?#iefix") format("embedded-opentype"), url("../../fonts/CenturyGothic.woff") format("woff"), url("../../fonts/CenturyGothic.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "BMW Regular";
+	src: url("../../fonts/BMWMotorradW05-Regular.woff");
+	src: url("../../fonts/BMWMotorradW05-Regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/BMWMotorradW05-Regular.woff") format("woff"), url("../../fonts/BMWMotorradW05-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "BMW Bold";
+	src: url("../../fonts/BMWMotorradW05-Bold.eot");
+	src: url("../../fonts/BMWMotorradW05-Bold.eot?#iefix") format("embedded-opentype"), url("../../fonts/BMWMotorradW05-Bold.woff") format("woff"), url("../../fonts/BMWMotorradW05-Bold.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	font-family: "BMW Regular", sans-serif;
+	color: #393939;
+	margin: 0;
+	padding: 0;
+	background: white;
+	position: relative;
+}
+body._lock {
+	overflow: hidden;
+}
+
+p {
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-weight: normal;
+}
+
+header, footer, section, div, span, p, button, a, input, textarea, form {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+button, input, textarea, select {
+	outline: none;
+}
+
+button {
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+
+a {
+	text-decoration: none;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+
+a:focus {
+	outline: none;
+}
+
+form {
+	margin: 0;
+}
+
+footer {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	-webkit-padding-start: 0px;
+	        padding-inline-start: 0px;
+}
+
+/* количество кружков */
+/* размер прелоадера */
+/* цвет кружков */
+/* угол поворота каждого кружка относительно центра фигуры */
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: white;
+	z-index: 5000;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+.preloader--hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+.preloader .l-circles {
+	fill: black;
+}
+.preloader .g-circle {
+	-webkit-transform-origin: 60px 60px;
+	    -ms-transform-origin: 60px 60px;
+	        transform-origin: 60px 60px;
+	-webkit-animation: opacity 1.2s linear infinite;
+	        animation: opacity 1.2s linear infinite;
+}
+.preloader .g-circle:nth-child(14n+1) {
+	-webkit-transform: rotate(-25.7142857143deg) translate(10px, 10px) scale(0.85);
+	    -ms-transform: rotate(-25.7142857143deg) translate(10px, 10px) scale(0.85);
+	        transform: rotate(-25.7142857143deg) translate(10px, 10px) scale(0.85);
+	-webkit-animation-delay: -0.1s;
+	        animation-delay: -0.1s;
+}
+.preloader .g-circle:nth-child(14n+2) {
+	-webkit-transform: rotate(-51.4285714286deg) translate(10px, 10px) scale(0.85);
+	    -ms-transform: rotate(-51.4285714286deg) translate(10px, 10px) scale(0.85);
+	        transform: rotate(-51.4285714286deg) translate(10px, 10px) scale(0.85);
+	-webkit-animation-delay: -0.2s;
+	        animation-delay: -0.2s;
+}
+.preloader .g-circle:nth-child(14n+3) {
+	-webkit-transform: rotate(-77.1428571429deg) translate(10px, 10px) scale(0.85);
+	    -ms-transform: rotate(-77.1428571429deg) translate(10px, 10px) scale(0.85);
+	        transform: rotate(-77.1428571429deg) translate(10px, 10px) scale(0.85);
+	-webkit-animation-delay: -0.3s;
+	        animation-delay: -0.3s;
+}
+.preloader .g-circle:nth-child(14n+4) {
+	-webkit-transform: rotate(-102.8571428571deg) translate(10px, 10px) scale(0.85);
+	    -ms-transform: rotate(-102.8571428571deg) translate(10px, 10px) scale(0.85);
+	        transform: rotate(-102.8571428571deg) translate(10px, 10px) scale(0.85);
+	-webkit-animation-delay: -0.4s;
+	        animation-delay: -0.4s;
+}
+.preloader .g-circle:nth-child(14n+5) {
+	-webkit-transform: rotate(-128.5714285714deg) translate(10px, 10px) scale(0.85);
+	    -ms-transform: rotate(-128.5714285714deg) translate(10px, 10px) scale(0.85);
+	        transform: rotate(-128.5714285714deg) translate(10px, 10px) scale(0.85);
+	-webkit-animation-delay: -0.5s;
+	        animation-delay: -0.5s;
+}
+.preloader .g-circle:nth-child(14n+6) {
+	-webkit-transform: rotate(-154.2857142857deg) translate(10px, 10px) scale(0.85);
+	    -ms-transform: rotate(-154.2857142857deg) translate(10px, 10px) scale(0.85);
+	        transform: rotate(-154.2857142857deg) translate(10px, 10px) scale(0.85);
+	-webkit-animation-delay: -0.6s;
+	        animation-delay: -0.6s;
+}
+.preloader .g-circle:nth-child(14n+7) {
+	-webkit-transform: rotate(-180deg) translate(10px, 10px) scale(0.85);
+	    -ms-transform: rotate(-180deg) translate(10px, 10px) scale(0.85);
+	        transform: rotate(-180deg) translate(10px, 10px) scale(0.85);
+	-webkit-animation-delay: -0.7s;
+	        animation-delay: -0.7s;
+}
+.preloader .g-circle:nth-child(14n+8) {
+	-webkit-transform: rotate(-205.7142857143deg) translate(10px, 10px) scale(0.85);
+	    -ms-transform: rotate(-205.7142857143deg) translate(10px, 10px) scale(0.85);
+	        transform: rotate(-205.7142857143deg) translate(10px, 10px) scale(0.85);
+	-webkit-animation-delay: -0.8s;
+	        animation-delay: -0.8s;
+}
+.preloader .g-circle:nth-child(14n+9) {
+	-webkit-transform: rotate(-231.4285714286deg) translate(10px, 10px) scale(0.85);
+	    -ms-transform: rotate(-231.4285714286deg) translate(10px, 10px) scale(0.85);
+	        transform: rotate(-231.4285714286deg) translate(10px, 10px) scale(0.85);
+	-webkit-animation-delay: -0.9s;
+	        animation-delay: -0.9s;
+}
+.preloader .g-circle:nth-child(14n+10) {
+	-webkit-transform: rotate(-257.1428571429deg) translate(10px, 10px) scale(0.85);
+	    -ms-transform: rotate(-257.1428571429deg) translate(10px, 10px) scale(0.85);
+	        transform: rotate(-257.1428571429deg) translate(10px, 10px) scale(0.85);
+	-webkit-animation-delay: -1s;
+	        animation-delay: -1s;
+}
+.preloader .g-circle:nth-child(14n+11) {
+	-webkit-transform: rotate(-282.8571428571deg) translate(10px, 10px) scale(0.85);
+	    -ms-transform: rotate(-282.8571428571deg) translate(10px, 10px) scale(0.85);
+	        transform: rotate(-282.8571428571deg) translate(10px, 10px) scale(0.85);
+	-webkit-animation-delay: -1.1s;
+	        animation-delay: -1.1s;
+}
+.preloader .g-circle:nth-child(14n+12) {
+	-webkit-transform: rotate(-308.5714285714deg) translate(10px, 10px) scale(0.85);
+	    -ms-transform: rotate(-308.5714285714deg) translate(10px, 10px) scale(0.85);
+	        transform: rotate(-308.5714285714deg) translate(10px, 10px) scale(0.85);
+	-webkit-animation-delay: -1.2s;
+	        animation-delay: -1.2s;
+}
+.preloader .g-circle:nth-child(14n+13) {
+	-webkit-transform: rotate(-334.2857142857deg) translate(10px, 10px) scale(0.85);
+	    -ms-transform: rotate(-334.2857142857deg) translate(10px, 10px) scale(0.85);
+	        transform: rotate(-334.2857142857deg) translate(10px, 10px) scale(0.85);
+	-webkit-animation-delay: -1.3s;
+	        animation-delay: -1.3s;
+}
+.preloader .g-circle:nth-child(14n+14) {
+	-webkit-transform: rotate(-360deg) translate(10px, 10px) scale(0.85);
+	    -ms-transform: rotate(-360deg) translate(10px, 10px) scale(0.85);
+	        transform: rotate(-360deg) translate(10px, 10px) scale(0.85);
+	-webkit-animation-delay: -1.4s;
+	        animation-delay: -1.4s;
+}
+.preloader .g-circle:nth-child(14n+1) .load-circle {
+	-webkit-animation-delay: -0.1s;
+	        animation-delay: -0.1s;
+}
+.preloader .g-circle:nth-child(14n+2) .load-circle {
+	-webkit-animation-delay: -0.2s;
+	        animation-delay: -0.2s;
+}
+.preloader .g-circle:nth-child(14n+3) .load-circle {
+	-webkit-animation-delay: -0.3s;
+	        animation-delay: -0.3s;
+}
+.preloader .g-circle:nth-child(14n+4) .load-circle {
+	-webkit-animation-delay: -0.4s;
+	        animation-delay: -0.4s;
+}
+.preloader .g-circle:nth-child(14n+5) .load-circle {
+	-webkit-animation-delay: -0.5s;
+	        animation-delay: -0.5s;
+}
+.preloader .g-circle:nth-child(14n+6) .load-circle {
+	-webkit-animation-delay: -0.6s;
+	        animation-delay: -0.6s;
+}
+.preloader .g-circle:nth-child(14n+7) .load-circle {
+	-webkit-animation-delay: -0.7s;
+	        animation-delay: -0.7s;
+}
+.preloader .g-circle:nth-child(14n+8) .load-circle {
+	-webkit-animation-delay: -0.8s;
+	        animation-delay: -0.8s;
+}
+.preloader .g-circle:nth-child(14n+9) .load-circle {
+	-webkit-animation-delay: -0.9s;
+	        animation-delay: -0.9s;
+}
+.preloader .g-circle:nth-child(14n+10) .load-circle {
+	-webkit-animation-delay: -1s;
+	        animation-delay: -1s;
+}
+.preloader .g-circle:nth-child(14n+11) .load-circle {
+	-webkit-animation-delay: -1.1s;
+	        animation-delay: -1.1s;
+}
+.preloader .g-circle:nth-child(14n+12) .load-circle {
+	-webkit-animation-delay: -1.2s;
+	        animation-delay: -1.2s;
+}
+.preloader .g-circle:nth-child(14n+13) .load-circle {
+	-webkit-animation-delay: -1.3s;
+	        animation-delay: -1.3s;
+}
+.preloader .g-circle:nth-child(14n+14) .load-circle {
+	-webkit-animation-delay: -1.4s;
+	        animation-delay: -1.4s;
+}
+.preloader .load-circle {
+	-webkit-transform-origin: 15px 15px;
+	    -ms-transform-origin: 15px 15px;
+	        transform-origin: 15px 15px;
+	-webkit-animation: 1.2s linear infinite;
+	        animation: 1.2s linear infinite;
+	-webkit-animation-name: transform;
+	        animation-name: transform;
+}
+
+@-webkit-keyframes opacity {
+	0% {
+		fill-opacity: 1;
+	}
+	42% {
+		fill-opacity: 0.8;
+	}
+	50% {
+		fill-opacity: 0.7;
+	}
+	100% {
+		fill-opacity: 0.3;
+	}
+}
+
+@keyframes opacity {
+	0% {
+		fill-opacity: 1;
+	}
+	42% {
+		fill-opacity: 0.8;
+	}
+	50% {
+		fill-opacity: 0.7;
+	}
+	100% {
+		fill-opacity: 0.3;
+	}
+}
+@-webkit-keyframes transform {
+	0% {
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+	}
+	100% {
+		-webkit-transform: scale(0.05);
+		        transform: scale(0.05);
+	}
+}
+@keyframes transform {
+	0% {
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+	}
+	100% {
+		-webkit-transform: scale(0.05);
+		        transform: scale(0.05);
+	}
+}
+.main-head {
+	position: relative;
+	-webkit-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+	        box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+}
+
+.container {
+	width: 1276px;
+	margin: 0 auto;
+	max-width: 100%;
+}
+@media (max-width: 1336px) {
+	.container {
+		max-width: 1140px;
+	}
+}
+@media (max-width: 1199px) {
+	.container {
+		max-width: 932px;
+	}
+}
+@media (max-width: 991px) {
+	.container {
+		max-width: 708px;
+	}
+}
+@media (max-width: 767px) {
+	.container {
+		max-width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+.container--form {
+	width: 704px;
+}
+.container--middle {
+	width: 958px;
+}
+.container--big {
+	width: 1150px;
+}
+.container--max {
+	width: 1353px;
+}
+
+.button {
+	height: 38px;
+	font-family: "BMW Regular", sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
+	position: relative;
+	cursor: pointer;
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
+	white-space: nowrap;
+}
+.button--blue {
+	background: #0B6CB2;
+	color: white;
+	border: 1px solid transparent;
+	padding: 0 20px;
+}
+.button--blue:hover {
+	color: #0B6CB2;
+	background: transparent;
+	border-color: #0B6CB2;
+}
+.button--top {
+	background: white;
+	font-size: 20px;
+	line-height: 25px;
+	padding: 0 60px;
+}
+@media (max-width: 991px) {
+	.button--top {
+		font-size: 16px;
+		line-height: 20px;
+		height: 30px;
+		padding: 0 30px;
+	}
+}
+.button--top:hover {
+	background: #0B6CB2;
+	color: white;
+}
+.button--more {
+	font-size: 14px;
+	line-height: 17px;
+	color: white;
+	background: #393939;
+	padding: 0 30px 0 15px;
+	position: relative;
+}
+.button--more:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 7px;
+	height: 11px;
+	background: url("../img/top-slider-nav.svg") center no-repeat;
+	right: 12px;
+	top: 14px;
+	-webkit-transform: scale(-1, 1);
+	    -ms-transform: scale(-1, 1);
+	        transform: scale(-1, 1);
+}
+.button--more:hover {
+	background: #0B6CB2;
+}
+.button--subscribe {
+	color: white;
+	background: #393939;
+	padding: 0 40px 2px 15px;
+	font-size: 14px;
+	line-height: 17px;
+}
+.button--subscribe:hover {
+	background: #0B6CB2;
+}
+.button--subscribe:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 19px;
+	height: 15px;
+	background: url("../img/subscribe-icon.svg");
+	right: 15px;
+	top: 11px;
+}
+.button--grey {
+	background: #393939;
+	color: white;
+	padding: 0 15px;
+}
+.button--grey:hover {
+	background: #0B6CB2;
+}
+.button--book {
+	font-size: 18px;
+	line-height: 22px;
+	width: 100%;
+}
+.button--small {
+	font-size: 12px;
+	line-height: 15px;
+	padding: 0 23px;
+}
+.button--back {
+	background: #393939;
+	color: white;
+	font-size: 12px;
+	line-height: 15px;
+	padding: 0 15px 0 31px;
+}
+.button--back:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 7px;
+	height: 11px;
+	background: url("../img/top-slider-nav.svg") center no-repeat;
+	left: 15px;
+	top: 13px;
+}
+.button--back:hover {
+	background: #0B6CB2;
+}
+.button--to_basket {
+	border: 2px solid #393939;
+	padding: 0 18px 0 53px;
+}
+.button--to_basket:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 29px;
+	height: 20px;
+	background: url("../img/order-icon.svg") center no-repeat;
+	background-size: cover;
+	left: 19px;
+	top: 7px;
+}
+.button--to_basket:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 29px;
+	height: 20px;
+	background: url("../img/order-icon-white.svg") center no-repeat;
+	background-size: cover;
+	left: 19px;
+	top: 7px;
+	opacity: 0;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+.button--to_basket:hover {
+	color: white;
+	border-color: #0B6CB2;
+	background: #0B6CB2;
+}
+.button--to_basket:hover:after {
+	opacity: 1;
+}
+.button--product {
+	background: transparent;
+	border: 2px solid white;
+	width: 100%;
+	color: white;
+}
+.button--product:hover {
+	background: white;
+	color: #393939;
+}
+.button--product_white {
+	background: white;
+	border: 2px solid white;
+	width: 100%;
+}
+.button--product_white:hover {
+	background: transparent;
+	color: white;
+}
+.button--product_order {
+	background: white;
+	width: 100%;
+}
+.button--product_order span {
+	position: relative;
+	padding-left: 37px;
+}
+.button--product_order span:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 29px;
+	height: 20px;
+	background: url("../img/order-icon.svg") center no-repeat;
+	background-size: cover;
+	left: 0;
+	top: 0;
+}
+.button--product_order span:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 29px;
+	height: 20px;
+	background: url("../img/order-icon-blue.svg") center no-repeat;
+	background-size: cover;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+.button--product_order:hover {
+	color: #0B6CB2;
+}
+.button--product_order:hover span:after {
+	opacity: 1;
+}
+.button--product_order_reverse {
+	background: transparent;
+	width: 100%;
+	border: 2px solid white;
+	color: white;
+}
+.button--product_order_reverse span {
+	position: relative;
+	padding-left: 37px;
+}
+.button--product_order_reverse span:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 29px;
+	height: 20px;
+	background: url("../img/order-icon-white.svg") center no-repeat;
+	background-size: cover;
+	left: 0;
+	top: 0;
+}
+.button--product_order_reverse span:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 29px;
+	height: 20px;
+	background: url("../img/order-icon-blue.svg") center no-repeat;
+	background-size: cover;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+.button--product_order_reverse:hover {
+	background: white;
+	color: #0B6CB2;
+}
+.button--product_order_reverse:hover span:after {
+	opacity: 1;
+}
+.button--transparent {
+	background: transparent;
+	color: #393939;
+	border: 2px solid #393939;
+}
+.button--transparent:hover {
+	border-color: #0B6CB2;
+	color: #0B6CB2;
+}
+
+.header {
+	width: 100%;
+	padding: 12px 40px 11px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	z-index: 1002;
+	position: relative;
+	background: white;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	height: 75px;
+}
+@media (max-width: 1361px) {
+	.header {
+		padding: 12px 30px 11px;
+	}
+}
+@media (max-width: 767px) {
+	.header {
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		height: 120px;
+		padding: 20px 15px 10px 15px;
+	}
+}
+.header--scrolling {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.header--scrolling + .header__catalog {
+	position: fixed;
+	top: 75px;
+}
+.header--hidden {
+	-webkit-transform: translateY(-100%);
+	    -ms-transform: translateY(-100%);
+	        transform: translateY(-100%);
+}
+.header--opened_menu .header__menu-button span:not(.header__menu-label):nth-child(1) {
+	-webkit-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
+	top: 10px;
+}
+.header--opened_menu .header__menu-button span:not(.header__menu-label):nth-child(2) {
+	opacity: 0;
+}
+.header--opened_menu .header__menu-button span:not(.header__menu-label):nth-child(3) {
+	-webkit-transform: rotate(-45deg);
+	    -ms-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
+	top: 10px;
+}
+.header--opened_menu .header__menu-button .header__menu-label--menu {
+	display: none;
+}
+.header--opened_menu .header__menu-button .header__menu-label--close {
+	display: block;
+}
+@media (max-width: 767px) {
+	.header--opened_menu .header__menu-button .header__menu-label--close {
+		display: none;
+	}
+}
+.header--opened_menu .header__form {
+	opacity: 1;
+}
+@media (max-width: 767px) {
+	.header--opened_menu .header__form {
+		height: 39px;
+	}
+}
+.header--opened_menu + .header__catalog {
+	-webkit-transform: translateY(0);
+	    -ms-transform: translateY(0);
+	        transform: translateY(0);
+	opacity: 1;
+}
+.header--opened_menu + .header__catalog .catalog-footer__link:after {
+	content: "";
+	-webkit-transition-delay: 0.9s;
+	     -o-transition-delay: 0.9s;
+	        transition-delay: 0.9s;
+	opacity: 1;
+	-webkit-transform: translate(0, 0);
+	    -ms-transform: translate(0, 0);
+	        transform: translate(0, 0);
+}
+.header--opened_menu + .header__catalog .catalog__items--shown {
+	opacity: 1;
+}
+.header--opened_menu .header__logo:before {
+	content: "";
+	-webkit-transition-delay: 0.9s;
+	     -o-transition-delay: 0.9s;
+	        transition-delay: 0.9s;
+	-webkit-transform: translate(0, 0);
+	    -ms-transform: translate(0, 0);
+	        transform: translate(0, 0);
+}
+.header__catalog {
+	-webkit-transform: translateY(-100%);
+	    -ms-transform: translateY(-100%);
+	        transform: translateY(-100%);
+}
+.header__menu-button {
+	cursor: pointer;
+	position: relative;
+	padding-left: 58px;
+}
+@media (max-width: 991px) {
+	.header__menu-button {
+		padding-left: 45px;
+	}
+}
+@media (max-width: 767px) {
+	.header__menu-button {
+		-webkit-box-ordinal-group: 1;
+		    -ms-flex-order: 0;
+		        order: 0;
+		margin-top: -20px;
+	}
+}
+.header__menu-button span:not(.header__menu-label) {
+	display: block;
+	width: 33px;
+	height: 4px;
+	background: #393939;
+	position: absolute;
+	left: 5px;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+@media (max-width: 991px) {
+	.header__menu-button span:not(.header__menu-label) {
+		width: 25px;
+		height: 2px;
+	}
+}
+.header__menu-button span:not(.header__menu-label):nth-child(1) {
+	top: 3px;
+}
+.header__menu-button span:not(.header__menu-label):nth-child(2) {
+	top: 11px;
+}
+.header__menu-button span:not(.header__menu-label):nth-child(3) {
+	top: 19px;
+}
+.header__menu-label {
+	color: #393939;
+	font-family: "BMW Regular", sans-serif;
+	font-weight: bold;
+	font-size: 23px;
+	line-height: 25px;
+	text-transform: uppercase;
+}
+@media (max-width: 991px) {
+	.header__menu-label {
+		font-size: 18px;
+		line-height: 24px;
+	}
+}
+@media (max-width: 767px) {
+	.header__menu-label {
+		display: none;
+	}
+}
+.header__menu-label--close {
+	display: none;
+}
+.header__form {
+	margin-left: 27px;
+	opacity: 0;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+@media (max-width: 1336px) {
+	.header__form {
+		min-width: 0 !important;
+		width: 100%;
+		margin-right: 30px !important;
+	}
+}
+@media (max-width: 1199px) {
+	.header__form {
+		margin-right: 15px !important;
+	}
+}
+@media (max-width: 991px) {
+	.header__form {
+		margin-left: 15px !important;
+	}
+}
+@media (max-width: 767px) {
+	.header__form {
+		-webkit-box-ordinal-group: 4;
+		    -ms-flex-order: 3;
+		        order: 3;
+		height: 0;
+		margin: 10px 0 !important;
+	}
+}
+.header__order {
+	margin-left: auto;
+}
+@media (max-width: 991px) {
+	.header__order {
+		font-size: 14px;
+	}
+}
+@media (max-width: 767px) {
+	.header__order {
+		-webkit-box-ordinal-group: 5;
+		    -ms-flex-order: 4;
+		        order: 4;
+		margin-top: 20px;
+	}
+}
+.header__basket {
+	font-family: "BMW Regular", sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 22px;
+	position: relative;
+	padding: 4px 25px 6px 36px;
+	color: #393939;
+	border-bottom: 2px dashed #393939;
+	cursor: pointer;
+	margin-left: 43px;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+@media (max-width: 1199px) {
+	.header__basket {
+		font-size: 0;
+		margin: 0 10px 0 30px;
+	}
+}
+@media (max-width: 991px) {
+	.header__basket {
+		margin: 0 0 0 15px;
+	}
+}
+@media (max-width: 767px) {
+	.header__basket {
+		-webkit-box-ordinal-group: 2;
+		    -ms-flex-order: 1;
+		        order: 1;
+		margin-left: auto;
+	}
+}
+.header__basket:before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 5px;
+	width: 29px;
+	height: 20px;
+	background: url("../img/order-icon.svg");
+}
+.header__basket:hover {
+	border-color: #0B6CB2;
+}
+.header__basket span {
+	font-family: "BMW Regular", sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+	color: #0B6CB2;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.header__logo {
+	margin-left: 35px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	cursor: pointer;
+	position: relative;
+}
+@media (max-width: 1199px) {
+	.header__logo {
+		margin-left: 20px;
+	}
+}
+@media (max-width: 767px) {
+	.header__logo {
+		-webkit-box-ordinal-group: 3;
+		    -ms-flex-order: 2;
+		        order: 2;
+	}
+}
+.header__logo img {
+	width: 140px;
+}
+@media (max-width: 991px) {
+	.header__logo img {
+		width: 130px;
+	}
+}
+.header__logo span {
+	font-weight: 900;
+	font-size: 8px;
+	color: black;
+	line-height: 13px;
+	margin-left: 39px;
+}
+@media (max-width: 991px) {
+	.header__logo span {
+		margin-left: 0;
+		line-height: 10px;
+		margin-top: 3px;
+	}
+}
+.header__logo:before {
+	content: "";
+	width: 100%;
+	height: 4px;
+	position: absolute;
+	top: -10px;
+	left: 0;
+	display: block;
+	background-color: #000;
+	-webkit-transform: translate(0, -25px);
+	    -ms-transform: translate(0, -25px);
+	        transform: translate(0, -25px);
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+}
+@media (max-width: 767px) {
+	.header__logo:before {
+		-webkit-transform: translate(0, -45px);
+		    -ms-transform: translate(0, -45px);
+		        transform: translate(0, -45px);
+	}
+}
+
+.catalog {
+	background: white;
+	position: absolute;
+	top: 100%;
+	z-index: 1001;
+	left: 0;
+	width: 100%;
+	-webkit-transition: -webkit-transform 0.9s;
+	transition: -webkit-transform 0.9s;
+	-o-transition: transform 0.9s;
+	transition: transform 0.9s;
+	transition: transform 0.9s, -webkit-transform 0.9s;
+	padding: 45px 60px 30px;
+	height: calc(100vh - 75px);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	overflow: auto;
+	opacity: 0;
+}
+.catalog__wrapper {
+	height: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	position: relative;
+}
+@media (max-width: 1336px) {
+	.catalog {
+		padding: 30px 9px;
+	}
+}
+@media (max-width: 991px) {
+	.catalog {
+		padding: 15px;
+		min-height: calc(100vh - 75px);
+	}
+}
+@media (max-width: 767px) {
+	.catalog {
+		min-height: calc(100vh - 120px);
+		padding-top: 0;
+	}
+}
+.catalog__categories {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	opacity: 0;
+	-webkit-transform: translateY(-30px);
+	    -ms-transform: translateY(-30px);
+	        transform: translateY(-30px);
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	margin-top: 13px;
+	position: relative;
+}
+@media (max-width: 767px) {
+	.catalog__categories {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-padding-start: 0px;
+		        padding-inline-start: 0px;
+	}
+}
+.catalog__categories--shown {
+	-webkit-transform: translateY(0);
+	    -ms-transform: translateY(0);
+	        transform: translateY(0);
+	opacity: 1;
+}
+.catalog__sub-categories {
+	display: none;
+	opacity: 0;
+	-webkit-transform: translateY(-30px);
+	    -ms-transform: translateY(-30px);
+	        transform: translateY(-30px);
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	position: absolute;
+	top: 80px;
+	left: 0;
+}
+@media (max-width: 767px) {
+	.catalog__sub-categories {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		position: relative;
+		-webkit-padding-start: 0px;
+		        padding-inline-start: 0px;
+		margin: 40px 0 0 15%;
+		top: 0;
+	}
+}
+.catalog__sub-categories--shown {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-transform: translateY(0);
+	    -ms-transform: translateY(0);
+	        transform: translateY(0);
+	opacity: 1;
+}
+.catalog__cat {
+	display: block;
+	font-size: 22px;
+	line-height: 26px;
+	color: #393939;
+	cursor: pointer;
+	margin: 0 21px;
+	padding-bottom: 24px;
+	-webkit-transition: 0.1s;
+	-o-transition: 0.1s;
+	transition: 0.1s;
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
+	position: relative;
+}
+@media (max-width: 1199px) {
+	.catalog__cat {
+		font-size: 18px;
+		line-height: 20px;
+		padding-bottom: 18px;
+		margin: 0 15px;
+	}
+}
+@media (max-width: 991px) {
+	.catalog__cat {
+		font-size: 16px;
+	}
+	.catalog__cat:first-child {
+		margin-left: 0;
+	}
+}
+@media (max-width: 767px) {
+	.catalog__cat {
+		margin: 0 0 20px 0;
+		padding: 0;
+		font-size: 24px;
+		line-height: 26px;
+	}
+}
+.catalog__cat > span {
+	position: relative;
+}
+@media (max-width: 767px) {
+	.catalog__cat > span {
+		display: block;
+		width: 100%;
+	}
+	.catalog__cat > span:before {
+		content: "";
+		display: none;
+		width: 100%;
+		height: 3px;
+		background-color: #393939;
+		position: absolute;
+		left: 0;
+		bottom: -15px;
+	}
+}
+.catalog__cat > span:after {
+	content: "";
+	display: block;
+	position: relative;
+	left: calc(50% - 10px);
+	top: 15px;
+	width: 20px;
+	height: 13px;
+	background: url("../img/catalog-arrow.svg");
+	opacity: 0;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	-webkit-transform: translateY(-10px);
+	    -ms-transform: translateY(-10px);
+	        transform: translateY(-10px);
+}
+@media (max-width: 767px) {
+	.catalog__cat > span:after {
+		position: absolute;
+		background-size: cover;
+		width: 16px;
+		height: 11px;
+		top: 10px;
+		right: 0;
+		margin: 0 0 0 48%;
+	}
+}
+@media (min-width: 767px) {
+	.catalog__cat:hover > span {
+		text-shadow: 1px 0 1px #393939;
+	}
+	.catalog__cat:hover > span:after, .catalog__cat--active > span:after {
+		-webkit-transform: translateY(0);
+		    -ms-transform: translateY(0);
+		        transform: translateY(0);
+		opacity: 1;
+	}
+}
+.catalog__cat--active > span {
+	text-shadow: 1px 0 1px #393939;
+}
+.catalog__cat--active > span:before {
+	display: block;
+}
+@media (max-width: 767px) {
+	.catalog__cat--parent > span:after {
+		-webkit-transform: translateY(0);
+		    -ms-transform: translateY(0);
+		        transform: translateY(0);
+		opacity: 1;
+	}
+}
+.catalog__cat--small {
+	font-size: 20px;
+	line-height: 23px;
+	margin: 0 17px;
+}
+@media (max-width: 991px) {
+	.catalog__cat--small {
+		font-size: 16px;
+		line-height: 20px;
+	}
+}
+@media (max-width: 767px) {
+	.catalog__cat--small {
+		font-size: 14px;
+		margin: 0 10px;
+	}
+}
+.catalog__cat--small:first-child {
+	margin-left: 21px;
+}
+@media (max-width: 991px) {
+	.catalog__cat--small:first-child {
+		margin-left: 15px;
+	}
+}
+@media (max-width: 767px) {
+	.catalog__cat--small:first-child {
+		margin-left: 0;
+	}
+}
+.catalog__sub-cat {
+	font-size: 20px;
+	line-height: 23px;
+	margin: 0 17px;
+	display: block;
+	color: #393939;
+	cursor: pointer;
+	padding-bottom: 24px;
+	-webkit-transition: 0.1s;
+	-o-transition: 0.1s;
+	transition: 0.1s;
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
+}
+@media (max-width: 1199px) {
+	.catalog__sub-cat {
+		font-size: 16px;
+		line-height: 20px;
+	}
+}
+@media (max-width: 991px) {
+	.catalog__sub-cat {
+		font-size: 14px;
+		margin: 0 10px;
+	}
+}
+@media (max-width: 767px) {
+	.catalog__sub-cat {
+		font-size: 20px;
+		line-height: 23px;
+		padding: 0;
+		margin: 0 0 25px 0;
+	}
+}
+.catalog__sub-cat > span {
+	position: relative;
+}
+@media (max-width: 767px) {
+	.catalog__sub-cat > span {
+		display: block;
+		width: 100%;
+	}
+	.catalog__sub-cat > span:before {
+		content: "";
+		display: none;
+		width: 100%;
+		height: 3px;
+		background-color: #393939;
+		position: absolute;
+		left: 0;
+		bottom: -15px;
+	}
+}
+.catalog__sub-cat > span:after {
+	content: "";
+	display: block;
+	position: relative;
+	left: calc(50% - 10px);
+	top: 15px;
+	width: 20px;
+	height: 13px;
+	background: url("../img/catalog-arrow.svg");
+	opacity: 0;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	-webkit-transform: translateY(-10px);
+	    -ms-transform: translateY(-10px);
+	        transform: translateY(-10px);
+}
+@media (max-width: 767px) {
+	.catalog__sub-cat > span:after {
+		position: absolute;
+		background-size: cover;
+		width: 16px;
+		height: 11px;
+		top: 10px;
+		right: 0;
+		margin: 0 0 0 48%;
+	}
+}
+@media (min-width: 767px) {
+	.catalog__sub-cat:hover > span {
+		text-shadow: 1px 0 1px #393939;
+	}
+	.catalog__sub-cat:hover > span:after, .catalog__sub-cat--active > span:after {
+		-webkit-transform: translateY(0);
+		    -ms-transform: translateY(0);
+		        transform: translateY(0);
+		opacity: 1;
+	}
+}
+.catalog__sub-cat--active > span {
+	text-shadow: 1px 0 1px #393939;
+}
+.catalog__sub-cat--active > span:before {
+	display: block;
+}
+@media (max-width: 767px) {
+	.catalog__sub-cat--parent > span:after {
+		-webkit-transform: translateY(0);
+		    -ms-transform: translateY(0);
+		        transform: translateY(0);
+		opacity: 1;
+	}
+}
+.catalog__sub-cat:first-child {
+	margin-left: 21px;
+}
+@media (max-width: 991px) {
+	.catalog__sub-cat:first-child {
+		margin-left: 15px;
+	}
+}
+@media (max-width: 767px) {
+	.catalog__sub-cat:first-child {
+		margin-left: 0;
+	}
+}
+.catalog__items {
+	display: none;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	opacity: 0;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+	overflow: auto;
+	padding-right: 7%;
+	min-height: 300px;
+	max-height: 320px;
+	position: absolute;
+	top: 50px;
+	left: 20px;
+	width: 80vw;
+}
+@media (max-width: 1336px) {
+	.catalog__items {
+		padding-right: 0;
+	}
+}
+@media (max-width: 767px) {
+	.catalog__items {
+		position: relative;
+		-ms-flex-wrap: nowrap;
+		    flex-wrap: nowrap;
+		top: 0;
+		left: -20%;
+		width: 95vw;
+		padding: 0 10px;
+		min-height: 0;
+	}
+}
+.catalog__items--shown {
+	opacity: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+.catalog__item {
+	width: 18%;
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	margin-top: 20px;
+	min-height: 215px;
+	cursor: pointer;
+	margin-right: 2%;
+}
+@media (max-width: 1199px) {
+	.catalog__item {
+		width: 23%;
+	}
+}
+@media (max-width: 991px) {
+	.catalog__item {
+		min-height: 200px;
+	}
+}
+@media (max-width: 767px) {
+	.catalog__item {
+		width: 48%;
+	}
+}
+.catalog__item:hover a {
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 27px;
+	border-color: #393939;
+}
+@media (max-width: 991px) {
+	.catalog__item:hover a {
+		font-size: 20px;
+	}
+}
+.catalog__item a {
+	display: block;
+	margin-top: 17px;
+	color: #393939;
+	font-size: 18px;
+	line-height: 23px;
+	padding-bottom: 11px;
+	border-bottom: 3px solid transparent;
+}
+@media (max-width: 991px) {
+	.catalog__item a {
+		font-size: 16px;
+		border-bottom-width: 2px;
+		padding-bottom: 8px;
+	}
+}
+.catalog__item-price {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	margin: 8px 0 0 0;
+}
+.catalog__item-price img {
+	width: 16px;
+	height: 16px;
+	margin: 0 0 0 4px;
+}
+.catalog__item-more {
+	font-size: 12px;
+	color: #393939;
+	font-family: "BMW Regular", sans-serif;
+}
+.catalog__item-more span {
+	display: inline-block;
+	width: 6px;
+}
+.catalog__item-more span img {
+	max-width: 100%;
+}
+.catalog__item-img {
+	width: 100%;
+	height: 135px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+@media (max-width: 991px) {
+	.catalog__item-img {
+		height: 130px;
+	}
+}
+.catalog__item-img img {
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+	margin: auto;
+}
+.catalog__text-wrap {
+	width: 100%;
+	margin: 30px 21px 44px;
+}
+@media (max-width: 991px) {
+	.catalog__text-wrap {
+		margin-bottom: 30px;
+	}
+}
+@media (max-width: 767px) {
+	.catalog__text-wrap {
+		margin: 0;
+		overflow: hidden;
+	}
+}
+.catalog__text-title {
+	font-family: "BMW Bold", sans-serif;
+	font-weight: bold;
+	font-size: 34px;
+	line-height: 41px;
+	margin-bottom: 30px;
+}
+@media (max-width: 1199px) {
+	.catalog__text-title {
+		font-size: 30px;
+	}
+}
+@media (max-width: 991px) {
+	.catalog__text-title {
+		font-size: 24px;
+		line-height: 30px;
+		margin-bottom: 20px;
+	}
+}
+@media (max-width: 767px) {
+	.catalog__text-title {
+		font-size: 18px;
+		line-height: 24px;
+		margin-bottom: 15px;
+	}
+}
+.catalog__text {
+	font-family: "BMW Regular", sans-serif;
+	font-size: 14px;
+	line-height: 17px;
+}
+.catalog__text-list {
+	margin: 52px 0 0 50%;
+	padding: 0;
+	list-style: none;
+}
+@media (max-width: 991px) {
+	.catalog__text-list {
+		margin-top: 30px;
+	}
+}
+@media (max-width: 767px) {
+	.catalog__text-list {
+		margin: 15px 30px;
+	}
+}
+.catalog__text-list li {
+	font-family: "BMW Regular", sans-serif;
+	font-size: 14px;
+	line-height: 17px;
+}
+.catalog__text-button {
+	font-size: 12px;
+	line-height: 15px;
+	padding: 0 21px;
+	margin: 45px 0 0 50%;
+	-webkit-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	        transform: translateX(-50%);
+}
+@media (max-width: 991px) {
+	.catalog__text-button {
+		margin-top: 30px;
+	}
+}
+@media (max-width: 767px) {
+	.catalog__text-button {
+		margin-top: 0;
+	}
+}
+
+.catalog-footer {
+	width: 100%;
+	position: relative;
+	top: 365px;
+	background-color: #fff;
+	padding: 15px 25px 30px 25px;
+}
+@media (max-width: 767px) {
+	.catalog-footer {
+		top: 0;
+	}
+}
+.catalog-footer__flex {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+}
+.catalog-footer__link {
+	display: block;
+	position: relative;
+}
+@media (max-width: 767px) {
+	.catalog-footer__link {
+		margin: 0 0 40px 0;
+	}
+}
+.catalog-footer__link span {
+	font-family: "BMW Bold", sans-serif;
+	text-transform: uppercase;
+	color: #000;
+	font-size: 14px;
+	font-weight: 600;
+}
+.catalog-footer__link:after {
+	content: "";
+	width: 100%;
+	height: 4px;
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	background-color: #000;
+	-webkit-transform: translate(0, 25px);
+	    -ms-transform: translate(0, 25px);
+	        transform: translate(0, 25px);
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+	opacity: 0;
+}
+
+.first-screen {
+	height: calc(100vh - 120px);
+	background: url("../img/overview/first-screen__bg.jpg") center/cover no-repeat;
+	position: relative;
+}
+.first-screen:before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.55);
+	z-index: 0;
+}
+
+.first-text {
+	height: 100%;
+	position: relative;
+	z-index: 2;
+	color: #fff;
+	font-family: "BMW Bold", sans-serif;
+	-webkit-transform: translate(0, 25%);
+	    -ms-transform: translate(0, 25%);
+	        transform: translate(0, 25%);
+}
+.first-text__head {
+	font-size: 54px;
+	line-height: 66px;
+}
+@media (max-width: 767px) {
+	.first-text__head {
+		font-size: 36px;
+		line-height: 56px;
+	}
+}
+@media (max-width: 400px) {
+	.first-text__head {
+		font-size: 28px;
+		line-height: 37px;
+	}
+}
+.first-text__text {
+	font-size: 42px;
+	line-height: 51px;
+}
+@media (max-width: 767px) {
+	.first-text__text {
+		font-size: 28px;
+		line-height: 37px;
+	}
+}
+@media (max-width: 400px) {
+	.first-text__text {
+		font-size: 22px;
+		line-height: 30px;
+	}
+}
+
+.content {
+	padding: 30px 0;
+}
+
+.content-block {
+	max-width: 100%;
+	margin: 0 0 30px 0;
+}
+.content-block:last-child {
+	margin: 0;
+}
+.content-block__flex {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+.content-block__head {
+	font-family: "BMW Bold", sans-serif;
+	color: #000;
+	font-size: 42px;
+	line-height: 51px;
+	margin: 0 0 30px 0;
+}
+.content-block__img {
+	width: 100%;
+	margin: 0 0 30px 0;
+}
+.content-block__img img {
+	max-width: 100%;
+}
+.content-block__text {
+	font-family: "BMW Regular", sans-serif;
+	font-size: 14px;
+	line-height: 17px;
+	word-wrap: break-word;
+}
+
+.main-link {
+	width: 100%;
+}
+.main-link__body {
+	padding: 11px 10px;
+}
+@media (max-width: 767px) {
+	.main-link__body {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+}
+.main-link__link {
+	font-family: "BMW Regular", sans-serif;
+	font-size: 18px;
+	line-height: 22px;
+	color: #393939;
+	margin: 0 30px 0 0;
+}
+.main-link__link:hover {
+	color: #0B6CB2;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+.main-link__link:last-child {
+	margin: 0 0 0 0;
+}
+.main-link__link--active {
+	font-family: "BMW Bold", sans-serif;
+	font-weight: 800;
+}
+@media (max-width: 767px) {
+	.main-link__link {
+		margin: 0 0 15px 0;
+		font-size: 23px;
+		line-height: 28px;
+	}
+	.main-link__link:last-child {
+		margin: 0 0 0 0;
+	}
+}
+
+.first-screen--about {
+	background: url("../img/about/first-screen__bg.jpg") center/cover no-repeat;
+	height: 60vh;
+}
+
+.content-about {
+	background: #E5E5E5;
+}
+.content-about__info {
+	padding: 70px 0 40px 0;
+	color: #393939;
+}
+.content-about__tittle {
+	font-family: "BMW Bold", sans-serif;
+	font-weight: 800;
+	font-size: calc(28px + 26 * ((100vw - 320px) / 1120));
+}
+.content-about__subtittle {
+	font-family: "BMW Bold", sans-serif;
+	font-weight: bold;
+	font-size: calc(21px + 13 * ((100vw - 320px) / 1120));
+	margin: 15px 0 0 0;
+}
+.content-about__text {
+	font-family: "BMW Regular", sans-serif;
+	font-size: 14px;
+	line-height: 17px;
+	margin: 30px 0 0 0;
+}
+
+.team {
+	background: #E5E5E5;
+	padding: 0 0 37px 0;
+}
+.team__tittle {
+	width: 100%;
+	text-align: center;
+	font-family: "BMW Bold", sans-serif;
+	font-weight: bold;
+	font-size: calc(22px + 10 * ((100vw - 320px) / 1120));
+}
+.team__tittle:after {
+	content: "";
+	width: 92px;
+	height: 5px;
+	display: block;
+	margin: 7px auto 0 auto;
+	background-color: #393939;
+}
+.team__items {
+	max-width: 860px;
+	margin: 42px auto 0 auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+@media (max-width: 767px) {
+	.team__items {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+	}
+}
+.team__item {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 1 40%;
+	        flex: 0 1 40%;
+}
+@media (max-width: 991px) {
+	.team__item {
+		-webkit-box-flex: 0;
+		    -ms-flex: 0 1 50%;
+		        flex: 0 1 50%;
+	}
+}
+.team__item:first-child, .team__item:nth-child(2) {
+	margin: 0 0 60px 0;
+}
+@media (max-width: 767px) {
+	.team__item {
+		margin: 0 0 60px 0;
+	}
+	.team__item:last-child {
+		margin: 0 0 0 0;
+	}
+}
+.team__photo {
+	width: 111px;
+	height: 111px;
+	border-radius: 50%;
+	margin: 0 33px 0 0;
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 0 40%;
+	        flex: 0 0 40%;
+}
+.team__photo img {
+	max-width: 100%;
+}
+.team__info {
+	color: #393939;
+}
+.team__name {
+	font-family: "BMW Bold", sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+}
+.team__position {
+	margin: 4px 0 10px 0;
+	font-family: "BMW Regular", sans-serif;
+	font-size: 14px;
+	line-height: 17px;
+}
+.team__contact {
+	display: block;
+	font-family: "BMW Bold", sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 17px;
+	color: #393939;
+}
+
+.container--trade {
+	width: 1050px;
+	margin: 0 auto;
+	max-width: 100%;
+}
+@media (max-width: 1336px) {
+	.container--trade {
+		max-width: 932px;
+	}
+}
+@media (max-width: 1199px) {
+	.container--trade {
+		max-width: 708px;
+	}
+}
+@media (max-width: 767px) {
+	.container--trade {
+		max-width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.first-screen--traid-in {
+	background: url("../img/trade/first-screen__bg.jpg") center/cover no-repeat;
+	height: 60vh;
+}
+
+.content-trade {
+	padding: 20px 0 30px 0;
+}
+
+.trade__tittle {
+	font-family: "BMW Bold", sans-serif;
+	font-weight: bold;
+	font-size: calc(28px + 26 * ((100vw - 320px) / 1120));
+}
+.trade__text {
+	font-family: "BMW Bold", sans-serif;
+	font-weight: bold;
+}
+.trade__item {
+	margin: 30px 0 0 0;
+}
+.trade__item h3 {
+	font-family: "BMW Bold", sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
+	margin: 0 0 5px 0;
+}
+.trade__item p {
+	font-family: "BMW Regular", sans-serif;
+	font-size: 14px;
+	line-height: 17px;
+}
+.trade__item:before {
+	content: "";
+	width: 704px;
+	height: 3px;
+	background-color: rgba(193, 192, 192, 0.5);
+	display: block;
+	margin: 0 0 25px 0;
+}
+@media (max-width: 767px) {
+	.trade__item:before {
+		width: 100%;
+	}
+}
+.trade__item:last-child:after {
+	content: "";
+	width: 704px;
+	height: 3px;
+	background-color: rgba(193, 192, 192, 0.5);
+	display: block;
+	margin: 25px 0 0 0;
+}
+@media (max-width: 767px) {
+	.trade__item:last-child:after {
+		width: 100%;
+	}
+}
+
+.request-trade {
+	margin: 35px 0 0 0;
+}
+.request-trade__info h2 {
+	font-family: "BMW Bold", sans-serif;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 23px;
+}
+.request-trade__info p {
+	font-family: "BMW Regular", sans-serif;
+	font-size: 14px;
+	line-height: 17px;
+	margin: 10px 0 0 0;
+}
+
+.trade-form {
+	margin: 40px 0 0 0;
+}
+
+.trade-form-block {
+	margin-top: 20px;
+}
+.trade-form-block:first-child {
+	margin-top: 0;
+}
+.trade-form-block--error .form-block__input,
+.trade-form-block--error .form-block-select {
+	border-color: red;
+}
+.trade-form-block--error .form-block__hint {
+	display: block;
+}
+.trade-form-block__label {
+	font-size: 18px;
+	line-height: 18px;
+	margin: 0 0 5px 0;
+	display: block;
+}
+@media (max-width: 767px) {
+	.trade-form-block__label {
+		font-size: 16px;
+	}
+}
+.trade-form-block__label + .form-block__input, .trade-form-block__label + .form-block-select {
+	margin-top: 11px;
+}
+.trade-form-block__input {
+	width: 550px;
+	height: 38px;
+	border: 1px solid #393939;
+	font-size: 18px;
+	padding: 0 13px;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+@media (max-width: 767px) {
+	.trade-form-block__input {
+		font-size: 16px;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		border-radius: 0;
+		width: 80vw;
+	}
+}
+.trade-form-block__input::-moz-placeholder {
+	color: #393939;
+}
+.trade-form-block__input::-webkit-input-placeholder {
+	color: #393939;
+}
+.trade-form-block__input:-ms-input-placeholder {
+	color: #393939;
+}
+.trade-form-block__input::-ms-input-placeholder {
+	color: #393939;
+}
+.trade-form-block__input::placeholder {
+	color: #393939;
+}
+.trade-form-block__hint {
+	font-size: 10px;
+	color: red;
+	margin-top: 10px;
+	display: none;
+}
+.trade-form-block__button {
+	margin-top: 14px;
+}
+
+.input-file {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.input-file span {
+	font-family: "BMW Regular", sans-serif;
+	font-size: 18px;
+	line-height: 18px;
+}
+.input-file__label {
+	cursor: pointer;
+}
+.input-file__icon {
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	background-color: #0B6CB2;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	margin: 0 13px 0 0;
+}
+.input-file__icon img {
+	max-width: 100%;
+}
+
+.container--delivery {
+	width: 1150px;
+	margin: 0 auto;
+	max-width: 100%;
+}
+@media (max-width: 1336px) {
+	.container--delivery {
+		max-width: 932px;
+	}
+}
+@media (max-width: 1199px) {
+	.container--delivery {
+		max-width: 708px;
+	}
+}
+@media (max-width: 767px) {
+	.container--delivery {
+		max-width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.delivery {
+	padding: 30px 0 26px 0;
+}
+.delivery__tittle {
+	font-family: "BMW Bold", sans-serif;
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 26px;
+}
+.delivery__tittle:after {
+	content: "";
+	width: 100%;
+	height: 3px;
+	background-color: rgba(193, 192, 192, 0.5);
+	display: block;
+	margin: 10px 0 0 0;
+}
+.delivery__sum {
+	font-family: "BMW Bold", sans-serif;
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 26px;
+	margin: 25px 0 0 0;
+}
+.delivery__sum span {
+	display: inline-block;
+	margin: 0 0 0 15px;
+}
+
+.delivery-form {
+	margin: 20px 0 0 0;
+}
+
+.delivery-form-block {
+	margin-top: 20px;
+}
+.delivery-form-block p {
+	font-family: "BMW Bold", sans-serif;
+	font-weight: bold;
+	font-size: 22px;
+	line-height: 26px;
+	margin: 0 0 10px 0;
+}
+.delivery-form-block:first-child {
+	margin-top: 0;
+}
+.delivery-form-block--error .form-block__input,
+.delivery-form-block--error .form-block-select {
+	border-color: red;
+}
+.delivery-form-block--error .form-block__hint {
+	display: block;
+}
+.delivery-form-block__label {
+	font-size: 18px;
+	line-height: 18px;
+	margin: 0 0 5px 0;
+	display: block;
+}
+@media (max-width: 767px) {
+	.delivery-form-block__label {
+		font-size: 16px;
+	}
+}
+.delivery-form-block__label + .form-block__input, .delivery-form-block__label + .form-block-select {
+	margin-top: 11px;
+}
+.delivery-form-block__label--radio {
+	display: inline;
+	font-size: 20px;
+	line-height: 23px;
+	cursor: pointer;
+}
+.delivery-form-block__label--disabled {
+	color: #ABABAB;
+}
+.delivery-form-block__input {
+	width: 550px;
+	height: 38px;
+	border: 1px solid #393939;
+	font-size: 18px;
+	padding: 0 13px;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+@media (max-width: 767px) {
+	.delivery-form-block__input {
+		font-size: 16px;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		border-radius: 0;
+		width: 80vw;
+	}
+}
+.delivery-form-block__input::-moz-placeholder {
+	color: #393939;
+}
+.delivery-form-block__input::-webkit-input-placeholder {
+	color: #393939;
+}
+.delivery-form-block__input:-ms-input-placeholder {
+	color: #393939;
+}
+.delivery-form-block__input::-ms-input-placeholder {
+	color: #393939;
+}
+.delivery-form-block__input::placeholder {
+	color: #393939;
+}
+.delivery-form-block__input--disabled {
+	border: 1px solid #ABABAB;
+}
+.delivery-form-block__textarea {
+	width: 550px;
+	min-height: 132px;
+	resize: none;
+	border: 1px solid #393939;
+	font-size: 18px;
+	padding: 0 13px;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+@media (max-width: 767px) {
+	.delivery-form-block__textarea {
+		font-size: 16px;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		border-radius: 0;
+		width: 80vw;
+	}
+}
+.delivery-form-block__textarea::-moz-placeholder {
+	color: #393939;
+}
+.delivery-form-block__textarea::-webkit-input-placeholder {
+	color: #393939;
+}
+.delivery-form-block__textarea:-ms-input-placeholder {
+	color: #393939;
+}
+.delivery-form-block__textarea::-ms-input-placeholder {
+	color: #393939;
+}
+.delivery-form-block__textarea::placeholder {
+	color: #393939;
+}
+.delivery-form-block__hint {
+	font-size: 10px;
+	color: red;
+	margin-top: 10px;
+	display: none;
+}
+.delivery-form-block__radio {
+	cursor: pointer;
+}
+.delivery-form-block > div {
+	margin: 0 0 8px 0;
+}
+.delivery-form-block > div:last-child {
+	margin: 0 0 0 0;
+}
+.delivery-form-block__button {
+	margin-top: 14px;
+}
+
+.container--stock {
+	width: 1050px;
+	margin: 0 auto;
+	max-width: 100%;
+}
+@media (max-width: 1336px) {
+	.container--stock {
+		max-width: 932px;
+	}
+}
+@media (max-width: 1199px) {
+	.container--stock {
+		max-width: 708px;
+	}
+}
+@media (max-width: 767px) {
+	.container--stock {
+		max-width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.content-stock {
+	padding: 43px 0 37px 0;
+}
+
+.stock__tittle {
+	font-family: "BMW Bold", sans-serif;
+	font-weight: bold;
+	font-size: calc(28px + 26 * ((100vw - 320px) / 1120));
+	color: #393939;
+}
+.stock__subtittle {
+	font-family: "BMW Bold", sans-serif;
+	font-weight: bold;
+	font-size: calc(18px + 24 * ((100vw - 320px) / 1120));
+	color: #393939;
+	margin: 27px 0 0 0;
+}
+.stock__text {
+	font-family: "BMW Regular", sans-serif;
+	font-size: 18px;
+	line-height: 22px;
+	color: #393939;
+	margin: 27px 0 0 0;
+}
+.stock__model-tittle {
+	margin: 27px 0 0 0;
+	font-family: "BMW Bold", sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
+}
+.stock__model {
+	margin: 126px 0 0 0;
+}
+.stock__btns {
+	margin: 27px 0 0 0;
+}
+.stock__btns button {
+	margin: 0 24px 0 0;
+}
+@media (max-width: 1199px) {
+	.stock__btns button {
+		margin: 0 24px 15px 0;
+	}
+}
+@media (max-width: 767px) {
+	.stock__btns button {
+		margin: 0 0 15px 0;
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+}
+.stock__btns button:last-child {
+	margin: 0 0 0 0;
+}
+.stock__btn2 {
+	padding: 0 30px;
+}
+@media (max-width: 767px) {
+	.stock__btn2 {
+		padding: 0;
+	}
+}
+
+.model {
+	padding: 0 15px;
+}
+.model__row-main {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+@media (max-width: 767px) {
+	.model__row-main {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+}
+.model__slider {
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 1 48%;
+	        flex: 0 1 48%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.model__arrow {
+	display: block;
+	width: 33px;
+	height: 33px;
+	background-color: #0B6CB2;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	cursor: pointer;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+.model__arrow:hover {
+	background-color: #393939;
+}
+.model__arrow img {
+	max-width: 100%;
+}
+.model__slide {
+	margin: 0 10px 0 10px;
+}
+.model__slide img {
+	max-width: 100%;
+}
+.model__info {
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 1 52%;
+	        flex: 0 1 52%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	padding: 0 0 0 15%;
+	color: #393939;
+}
+@media (max-width: 1199px) {
+	.model__info {
+		padding: 0 0 0 5%;
+	}
+}
+@media (max-width: 767px) {
+	.model__info {
+		margin: 20px 0 0 0;
+		text-align: center;
+	}
+}
+.model__name {
+	font-family: "BMW Regular", sans-serif;
+	font-size: 18px;
+	line-height: 21px;
+}
+.model__name span {
+	font-family: "BMW Bold", sans-serif;
+	font-weight: bold;
+	display: inline-block;
+	margin: 0 0 0 10px;
+}
+.model__common-info {
+	font-family: "BMW Regular", sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	color: #000;
+	margin: 6px 0 0 0;
+}
+.model__cost {
+	margin: 18px 0 0 0;
+	font-family: "BMW Regular", sans-serif;
+	font-size: 18px;
+	line-height: 21px;
+}
+.model__cost span {
+	font-family: "BMW Bold", sans-serif;
+	font-weight: bold;
+	display: inline-block;
+	margin: 0 0 0 10px;
+}
+.model__cost:after {
+	content: "";
+	width: 185px;
+	height: 4px;
+	display: block;
+	background-color: #919191;
+	margin: 6px 0 0 0;
+}
+@media (max-width: 767px) {
+	.model__cost:after {
+		margin: 6px auto 0 auto;
+	}
+}
+.model__btn {
+	padding: 7px 13px;
+	background-color: #393939;
+	display: block;
+	width: 109px;
+	margin: 15px 0 0 0;
+}
+@media (max-width: 767px) {
+	.model__btn {
+		margin: 15px auto 0 auto;
+		width: 125px;
+	}
+}
+.model__btn:hover {
+	background-color: #0B6CB2;
+}
+.model__btn span {
+	font-family: "Century Gothic Regular";
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 15px;
+	color: #fff;
+	position: relative;
+}
+.model__btn span:after {
+	content: "";
+	display: inline-block;
+	width: 6px;
+	height: 10px;
+	background: url("../../img/stock/arrow-next.svg") center/cover no-repeat;
+	position: absolute;
+	top: 4px;
+	right: -15px;
+}
+.model__row-items {
+	margin: 26px 0 0 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+@media (max-width: 767px) {
+	.model__row-items {
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+	}
+}
+.model__item {
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 0 20%;
+	        flex: 0 0 20%;
+	height: 128px;
+	padding: 0 6px;
+}
+.model__item:first-child {
+	padding-left: 0;
+}
+.model__item:last-child {
+	padding-right: 0;
+}
+@media (max-width: 767px) {
+	.model__item {
+		-webkit-box-flex: 0;
+		    -ms-flex: 0 1 50%;
+		        flex: 0 1 50%;
+		padding: 0;
+		margin: 0 0 10px 0;
+		height: auto;
+	}
+	.model__item:nth-child(odd) {
+		padding: 0 5px 0 0;
+	}
+	.model__item:nth-child(even) {
+		padding: 0 0 0 5px;
+	}
+}
+@media (max-width: 440px) {
+	.model__item {
+		-webkit-box-flex: 0;
+		    -ms-flex: 0 1 100%;
+		        flex: 0 1 100%;
+	}
+	.model__item:nth-child(odd) {
+		padding: 0 0 0 0;
+	}
+	.model__item:nth-child(even) {
+		padding: 0 0 0 0;
+	}
+}
+.model__item img {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+	-o-object-position: center;
+	   object-position: center;
+}
+
+.footer {
+	background: #F2F2F2;
+	padding: 39px 0;
+}
+@media (max-width: 767px) {
+	.footer {
+		padding: 20px 0 10px;
+	}
+}
+.footer__flex {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+@media (max-width: 767px) {
+	.footer__flex {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+}
+.footer__left {
+	width: 34%;
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
+}
+@media (max-width: 767px) {
+	.footer__left {
+		width: 100%;
+	}
+}
+.footer__subscribe-text {
+	color: #393939;
+	font-family: "BMW Regular", sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 17px;
+	margin-bottom: 12px;
+}
+.footer__soc {
+	margin-top: 16px;
+}
+.footer__contacts {
+	margin-top: 17px;
+	font-size: 14px;
+	line-height: 16px;
+}
+.footer__menu {
+	width: 100%;
+}
+@media (max-width: 767px) {
+	.footer__menu {
+		margin-left: 0;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		margin-top: 20px;
+	}
+}
+
+.socials {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+.socials__item {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	color: #393939;
+	margin-right: 12px;
+}
+.socials__item:hover {
+	color: #0B6CB2;
+}
+.socials__item:hover .socials__icon {
+	background: #393939;
+}
+.socials__icon {
+	width: 29px;
+	height: 29px;
+	background: #0B6CB2;
+	border-radius: 50%;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.socials__icon + .socials__text {
+	margin-left: 6px;
+}
+.socials__text {
+	font-family: "BMW Regular", sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 17px;
+}
+
+.column-menu {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	margin: 0 0 0 55px;
+}
+@media (max-width: 767px) {
+	.column-menu {
+		margin: 0 0 0 0;
+	}
+}
+.column-menu__col {
+	margin-right: 55px;
+}
+@media (max-width: 991px) {
+	.column-menu__col {
+		-webkit-box-flex: 0;
+		    -ms-flex: 0 1 100%;
+		        flex: 0 1 100%;
+	}
+	.column-menu__col:last-child {
+		margin: 25px 0 0 0;
+	}
+}
+.column-menu__col:last-child {
+	margin-right: 0;
+}
+.column-menu__link {
+	color: #393939;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 17px;
+	position: relative;
+	display: block;
+	margin-bottom: 10px;
+}
+.column-menu__link:hover {
+	color: #0B6CB2;
+}
+.column-menu__link--external {
+	padding-left: 20px;
+}
+.column-menu__link--external:before {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 13px;
+	height: 13px;
+	background: url("../img/external-icon.svg");
+}
+
+.bottom {
+	padding: 18px 0 20px;
+}
+.bottom__flex {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+@media (max-width: 767px) {
+	.bottom__flex {
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+	}
+}
+.bottom__copyright {
+	max-width: 707px;
+	font-size: 8px;
+	line-height: 10px;
+	font-family: "BMW Regular", sans-serif;
+	margin-right: 30px;
+}
+@media (max-width: 767px) {
+	.bottom__copyright {
+		width: 100%;
+		margin-bottom: 15px;
+	}
+}
+.bottom__logo-slogan {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+@media (max-width: 767px) {
+	.bottom__logo-slogan {
+		width: 100%;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+	}
+}
+.bottom__logo {
+	width: 200px;
+	height: 46px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.bottom__logo img {
+	max-width: 100%;
+}
+.bottom__slogan {
+	font-family: "BMW Bold", sans-serif;
+	color: #393939;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 17px;
+	padding-bottom: 6px;
+	padding-right: 9px;
+	position: relative;
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
+	margin: 0 0 0 20px;
+}
+.bottom__slogan:before {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: #393939;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+.bottom__slogan--lined:before {
+	width: 100%;
+}

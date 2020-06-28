@@ -1,0 +1,46 @@
+
+//fonts
+
+$sloganFont: 'Century Gothic Regular';
+
+$regFont: 'BMW Regular', sans-serif;
+$boldFont: 'BMW Bold', sans-serif;
+
+//colors
+
+$blue: #0B6CB2;
+$dark: #393939;
+
+//media
+
+$lg: 1336px;
+$md: 1199px;
+$sm: 991px;
+$xs: 767px;
+
+// mixins
+
+@mixin placeholderColor($color) {
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &::-ms-input-placeholder {
+    color: $color;
+  }
+  &::placeholder {
+    color: $color;
+  }
+}
+
+$maxWidth: 1440; 
+@mixin adaptive-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidth: $maxWidth - 320;
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}

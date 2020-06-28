@@ -1,0 +1,504 @@
+
+
+// Общие стили
+@import "fonts";
+@import "var";
+
+body {
+    font-family: $regFont;
+    color: $dark;
+    margin: 0;
+    padding: 0;
+    background: white;
+    position: relative;
+
+    &._lock{
+     	overflow: hidden;
+    }
+}
+
+p {
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    font-weight: normal;
+}
+header, footer, section, div, span, p, button, a, input, textarea, form {
+    box-sizing: border-box;
+}
+
+button,input,textarea,select{
+    outline: none;
+}
+button {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    transition: 0.3s;
+}
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:focus {
+    outline: none;
+}
+
+form {
+    margin: 0;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+	padding-inline-start: 0px;
+}
+
+
+
+$max: 14; /* количество кружков */
+$size: 120px; /* размер прелоадера */
+$fill: black; /* цвет кружков */
+$angle: 360/$max; /* угол поворота каждого кружка относительно центра фигуры */
+
+.preloader {
+    position: fixed;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: white;
+    z-index: 5000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+
+    &--hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .l-circles {
+        fill: $fill;
+    }
+
+    .g-circle {
+        transform-origin: $size/2 $size/2;
+        animation: opacity 1.2s linear infinite;
+
+        @for $item from 1 through $max {
+            &:nth-child(#{$max}n + #{$item}){
+                transform: rotate(#{-$angle*$item}deg) translate(10px, 10px) scale(.85);
+                animation-delay: -#{$item/10}s;
+            }
+        }
+
+        @for $item from 1 through $max {
+            &:nth-child(#{$max}n + #{$item}) .load-circle {
+                animation-delay: -#{$item/10}s;
+            }
+        }
+    }
+
+    .load-circle {
+        transform-origin: 15px 15px;
+        animation: 1.2s linear infinite;
+        animation-name: transform;
+    }
+}
+
+@keyframes opacity {
+    0% {
+        fill-opacity: 1;
+    }
+    42% {
+        fill-opacity: 0.8;
+    }
+    50% {
+        fill-opacity: 0.7;
+    }
+    100% {
+        fill-opacity: 0.3;
+    }
+}
+@keyframes transform {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(.05);
+    }
+}
+
+
+.main-head {
+    position: relative;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+
+}
+
+.container {
+    width: 1276px;
+    margin: 0 auto;
+    max-width: 100%;
+
+    @media (max-width: $lg) {
+        max-width: 1140px;
+    }
+
+    @media (max-width: $md) {
+        max-width: 932px;
+    }
+
+    @media (max-width: $sm) {
+        max-width: 708px;
+    }
+
+    @media (max-width: $xs) {
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    &--form {
+        width: 704px;
+    }
+
+    &--middle {
+        width: 958px;
+    }
+
+    &--big {
+        width: 1150px;
+    }
+
+    &--max {
+        width: 1353px;
+    }
+}
+
+.button {
+    height: 38px;
+    font-family: $regFont;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+    white-space: nowrap;
+
+    &--blue {
+        background: $blue;
+        color: white;
+        border: 1px solid transparent;
+        padding: 0 20px;
+
+        &:hover {
+            color: $blue;
+            background: transparent;
+            border-color: $blue;
+        }
+    }
+
+    &--top {
+        background: white;
+        font-size: 20px;
+        line-height: 25px;
+        padding: 0 60px;
+
+        @media (max-width: $sm) {
+            font-size: 16px;
+            line-height: 20px;
+            height: 30px;
+            padding: 0 30px;
+        }
+
+        &:hover {
+            background: $blue;
+            color: white;
+        }
+    }
+
+    &--more {
+        font-size: 14px;
+        line-height: 17px;
+        color: white;
+        background: $dark;
+        padding: 0 30px 0 15px;
+        position: relative;
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 7px;
+            height: 11px;
+            background: url('../img/top-slider-nav.svg') center no-repeat;
+            right: 12px;
+            top: 14px;
+            transform: scale(-1,1);
+        }
+
+        &:hover {
+            background: $blue;
+        }
+    }
+
+    &--subscribe {
+        color: white;
+        background: $dark;
+        padding: 0 40px 2px 15px;
+        font-size: 14px;
+        line-height: 17px;
+
+        &:hover {
+            background: $blue;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 19px;
+            height: 15px;
+            background: url('../img/subscribe-icon.svg');
+            right: 15px;
+            top: 11px;
+        }
+    }
+
+    &--grey {
+        background: $dark;
+        color: white;
+        padding: 0 15px;
+
+        &:hover {
+            background: $blue;
+        }
+    }
+
+    &--book {
+        font-size: 18px;
+        line-height: 22px;
+        width: 100%;
+    }
+
+    &--small {
+        font-size: 12px;
+        line-height: 15px;
+        padding: 0 23px;
+    }
+
+    &--back {
+        background: $dark;
+        color: white;
+        font-size: 12px;
+        line-height: 15px;
+        padding: 0 15px 0 31px;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 7px;
+            height: 11px;
+            background: url('../img/top-slider-nav.svg') center no-repeat;
+            left: 15px;
+            top: 13px;
+        }
+
+        &:hover {
+            background: $blue;
+        }
+    }
+
+    &--to_basket {
+        border: 2px solid $dark;
+        padding: 0 18px 0 53px;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 29px;
+            height: 20px;
+            background: url('../img/order-icon.svg') center no-repeat;
+            background-size: cover;
+            left: 19px;
+            top: 7px;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 29px;
+            height: 20px;
+            background: url('../img/order-icon-white.svg') center no-repeat;
+            background-size: cover;
+            left: 19px;
+            top: 7px;
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        &:hover {
+            color: white;
+            border-color: $blue;
+            background: $blue;
+
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &--product {
+        background: transparent;
+        border: 2px solid white;
+        width: 100%;
+        color: white;
+
+        &:hover {
+            background: white;
+            color: $dark;
+        }
+    }
+
+    &--product_white {
+        background: white;
+        border: 2px solid white;
+        width: 100%;
+
+        &:hover {
+            background: transparent;
+            color: white;
+        }
+    }
+
+    &--product_order {
+        background: white;
+        width: 100%;
+
+        span {
+            position: relative;
+            padding-left: 37px;
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 29px;
+                height: 20px;
+                background: url('../img/order-icon.svg') center no-repeat;
+                background-size: cover;
+                left: 0;
+                top: 0;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 29px;
+                height: 20px;
+                background: url('../img/order-icon-blue.svg') center no-repeat;
+                background-size: cover;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                transition: 0.3s;
+            }
+        }
+
+        &:hover {
+            color: $blue;
+
+            span:after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &--product_order_reverse {
+        background: transparent;
+        width: 100%;
+        border: 2px solid white;
+        color: white;
+
+        span {
+            position: relative;
+            padding-left: 37px;
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 29px;
+                height: 20px;
+                background: url('../img/order-icon-white.svg') center no-repeat;
+                background-size: cover;
+                left: 0;
+                top: 0;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 29px;
+                height: 20px;
+                background: url('../img/order-icon-blue.svg') center no-repeat;
+                background-size: cover;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                transition: 0.3s;
+            }
+        }
+
+        &:hover {
+            background: white;
+            color: $blue;
+
+            span:after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &--transparent {
+        background: transparent;
+        color: $dark;
+        border: 2px solid $dark;
+
+        &:hover {
+            border-color: $blue;
+            color: $blue;
+        }
+    }
+}
+
+// Header
+@import 'header';
+@import 'catalog';
+
+@import 'overview';
+
+@import 'about';
+
+@import 'trade-in';
+
+@import 'delivery';
+
+@import 'stock';
+
+// Footer
+@import 'footer';
+
+

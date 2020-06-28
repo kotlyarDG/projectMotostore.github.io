@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="text/html" charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MotoStore</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  
+</head>
+<body class="body">
+
+
+<!-- LOADER -->
+
+<!-- Добавить класс "preloader--hidden" для скрытия прелоадера -->
+<div class="preloader preloader--hidden">
+    <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="l-circle">
+            <circle r="10" cx="10" cy="10" />
+        </symbol>
+        <g id="loader" class="l-circles">
+            <g class="g-circle">
+                <use xlink:href="#l-circle" class="load-circle" />
+            </g>
+            <g class="g-circle">
+                <use xlink:href="#l-circle" class="load-circle" />
+            </g>
+            <g class="g-circle">
+                <use xlink:href="#l-circle" class="load-circle" />
+            </g>
+            <g class="g-circle">
+                <use xlink:href="#l-circle" class="load-circle" />
+            </g>
+            <g class="g-circle">
+                <use xlink:href="#l-circle" class="load-circle" />
+            </g>
+            <g class="g-circle">
+                <use xlink:href="#l-circle" class="load-circle" />
+            </g>
+            <g class="g-circle">
+                <use xlink:href="#l-circle" class="load-circle" />
+            </g>
+            <g class="g-circle">
+                <use xlink:href="#l-circle" class="load-circle" />
+            </g>
+            <g class="g-circle">
+                <use xlink:href="#l-circle" class="load-circle" />
+            </g>
+            <g class="g-circle">
+                <use xlink:href="#l-circle" class="load-circle" />
+            </g>
+            <g class="g-circle">
+                <use xlink:href="#l-circle" class="load-circle" />
+            </g>
+            <g class="g-circle">
+                <use xlink:href="#l-circle" class="load-circle" />
+            </g>
+            <g class="g-circle">
+                <use xlink:href="#l-circle" class="load-circle" />
+            </g>
+            <g class="g-circle">
+                <use xlink:href="#l-circle" class="load-circle" />
+            </g>
+        </g>
+    </svg>
+</div>
+<!-- / LOADER -->
+
+<section class="main-head">
+    <!-- HEADER -->
+
+    <!-- Добавить класс "header--scrolling", если нужна прибитая к верху шапка.
+         Добавить К НЕМУ класс "header--hidden", если нужно скрыть шапку при скролле вниз -->
+
+    <!-- Добавить класс "header--opened_menu", когда меню открыто -->
+    <header class="header">
+        <button class="header__menu-button">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="header__menu-label header__menu-label--menu">Меню</span>
+            <span class="header__menu-label header__menu-label--close">Закрыть</span>
+        </button>
+        <button class="button button--blue header__order">Заказать тест-райд</button>
+        <div class="header__basket">Корзина<span>(0)</span></div>
+        <div class="header__logo">
+            <img src="img/logo.svg" alt="">
+            <span>Официальный дилерский центр</span>
+        </div>
+    </header>
+
+    <!-- / HEADER -->
+
+    <!-- CATALOG -->
+
+    <div class="catalog header__catalog">
+        <div class="catalog__wrapper">
+        <!-- Добавить класс "catalog__categories--shown" для анимированного появления списка категорий -->
+        <!-- Добавить класс "catalog__categories--parent" или "catalog__sub-categories--parent", если элемент содержит подпункты -->
+            <ul class="catalog__categories catalog__categories--shown">
+                <li class="catalog__cat catalog__cat--active catalog__cat--parent">
+                    <span>Мотоциклы BMW</span>
+                    <ul class="catalog__sub-categories catalog__sub-categories--shown">
+                        <li class="catalog__sub-cat"><span>Adventure</span></li>
+                        <li class="catalog__sub-cat catalog__sub-cat--active catalog__sub-cat--parent">
+                            <span>Roadster</span>
+
+                            <div class="catalog__items catalog__items--shown">
+                                <div class="catalog__item">
+                                    <div class="catalog__item-img"><img src="img/cat1.jpg" alt=""></div>
+                                    <a href="#">
+                                        <div>G 310 GS</div>
+                                        <div class="catalog__item-price">
+                                            <div>398 000 ₽</div>
+                                            <img src="img/info.png" alt="">
+                                        </div>
+                                        <div class="catalog__item-more">
+                                            <span><img src="img/product-arrow.svg" alt=""></span>
+                                            Подробнее
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="catalog__item">
+                                    <div class="catalog__item-img"><img src="img/cat1.jpg" alt=""></div>
+                                    <a href="#">
+                                        <div>G 310 GS</div>
+                                        <div class="catalog__item-price">
+                                            <div>398 000 ₽</div>
+                                            <img src="img/info.png" alt="">
+                                        </div>
+                                        <div class="catalog__item-more">
+                                            <span><img src="img/product-arrow.svg" alt=""></span>
+                                            Подробнее
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="catalog__item">
+                                    <div class="catalog__item-img"><img src="img/cat1.jpg" alt=""></div>
+                                    <a href="#">
+                                        <div>G 310 GS</div>
+                                        <div class="catalog__item-price">
+                                            <div>398 000 ₽</div>
+                                            <img src="img/info.png" alt="">
+                                        </div>
+                                        <div class="catalog__item-more">
+                                            <span><img src="img/product-arrow.svg" alt=""></span>
+                                            Подробнее
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="catalog__item">
+                                    <div class="catalog__item-img"><img src="img/cat1.jpg" alt=""></div>
+                                    <a href="#">
+                                        <div>G 310 GS</div>
+                                        <div class="catalog__item-price">
+                                            <div>398 000 ₽</div>
+                                            <img src="img/info.png" alt="">
+                                        </div>
+                                        <div class="catalog__item-more">
+                                            <span><img src="img/product-arrow.svg" alt=""></span>
+                                            Подробнее
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="catalog__item">
+                                    <div class="catalog__item-img"><img src="img/cat1.jpg" alt=""></div>
+                                    <a href="#">
+                                        <div>G 310 GS</div>
+                                        <div class="catalog__item-price">
+                                            <div>398 000 ₽</div>
+                                            <img src="img/info.png" alt="">
+                                        </div>
+                                        <div class="catalog__item-more">
+                                            <span><img src="img/product-arrow.svg" alt=""></span>
+                                            Подробнее
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="catalog__item">
+                                    <div class="catalog__item-img"><img src="img/cat1.jpg" alt=""></div>
+                                    <a href="#">
+                                        <div>G 310 GS</div>
+                                        <div class="catalog__item-price">
+                                            <div>398 000 ₽</div>
+                                            <img src="img/info.png" alt="">
+                                        </div>
+                                        <div class="catalog__item-more">
+                                            <span><img src="img/product-arrow.svg" alt=""></span>
+                                            Подробнее
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </li>
+                        <li class="catalog__sub-cat catalog__sub-cat--parent"><span>Sport</span></li>
+                        <li class="catalog__sub-cat catalog__sub-cat--parent"><span>Tour</span></li>
+                        <li class="catalog__sub-cat catalog__sub-cat--parent">
+                            <span>Heritage</span>
+                        </li>
+                        <li class="catalog__sub-cat"><span>Maxi-scooter</span></li>
+                        <li class="catalog__sub-cat"><span>Мотоциклы с пробегом</span></li>
+                        <li class="catalog__sub-cat"><span>Мотоциклы в наличии</span></li>
+                    </ul>
+                </li>
+                <li class="catalog__cat"><span>Аксессуары</span></li>
+                <li class="catalog__cat"><span>Сервис</span>
+                    
+                </li>
+                <li class="catalog__cat">
+                    <span>Владельцам BMW</span>
+                </li>
+                <li class="catalog__cat"><span>Мир BMW</span></li>
+                <li class="catalog__cat"><span>Дилерский центр</span></li>
+            </ul>
+
+            <!-- Добавить класс "catalog__categories--shown" для анимированного появления списка категорий -->
+            
+
+            <!-- Добавить класс "catalog__items--shown" для анимированного появления списка товаров -->
+            
+
+            <div class="catalog-footer">
+                <div class="catalog-footer__flex">
+                    <a href="#" class="catalog-footer__link"><span>make life a ride</span></a>
+                </div>
+            </div> 
+
+            
+        </div>
+    </div>
+
+    <!-- / CATALOG -->
+</section>
+
+<!-- CONTENT -->
+
+<section class="content-delivery delivery">
+    <div class="container--delivery">
+        <div class="delivery__wrapper">
+            <h1 class="delivery__tittle">Оформление заказа</h1>
+            <form class="delivery-form">
+
+                <div class="delivery-form-block">
+                    <p>Способ получения заказа</p>
+                    <div>
+                        <input type="radio" id="delivery-var-1" name="delivery-var" class="delivery-form-block__radio" checked>
+                        <label class="delivery-form-block__label--radio" for="delivery-var-1">Доставка</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="delivery-var-2" name="delivery-var" class="delivery-form-block__radio">
+                        <label class="delivery-form-block__label--radio" for="delivery-var-2">Самовывоз</label>
+                    </div>
+                </div>
+
+                <!-- Можно добавить класс "form-block--error". Появится текст ошибки и рамка у поля станет красной -->
+                <!-- Можно добавить класс "delivery-form-block__label--disabled" для оформления неактивного лейбла -->
+                <!-- Можно добавить класс "delivery-form-block__input--disabled" для оформления неактивного инпута -->
+                <div class="delivery-form-block">
+                    <label class="delivery-form-block__label" id="label-address">Адрес доставки</label>
+                    <input type="text" class="delivery-form-block__input" id="delivery__address">
+                    <p class="delivery-form-block__hint">Тут текст ошибки</p>
+                </div>
+                
+                <!-- Можно добавить класс "form-block--error". Появится текст ошибки и рамка у поля станет красной -->
+                <div class="delivery-form-block">
+                    <label class="delivery-form-block__label">Имя</label>
+                    <input type="text" class="delivery-form-block__input">
+                    <p class="delivery-form-block__hint">Тут текст ошибки</p>
+                </div>
+
+                <!-- Можно добавить класс "form-block--error". Появится текст ошибки и рамка у поля станет красной -->
+                <div class="delivery-form-block">
+                    <label class="delivery-form-block__label">Контактный телефон</label>
+                    <input type="text" class="delivery-form-block__input">
+                    <p class="delivery-form-block__hint">Тут текст ошибки</p>
+                </div>
+
+                <!-- Можно добавить класс "form-block--error". Появится текст ошибки и рамка у поля станет красной -->
+                <div class="delivery-form-block">
+                    <label class="delivery-form-block__label">Комментарий к заказу</label>
+                    <textarea class="delivery-form-block__textarea"></textarea>
+                    <p class="delivery-form-block__hint">Тут текст ошибки</p>
+                </div>
+
+                <div class="delivery-form-block">
+                    <p>Способ оплаты</p>
+                    <div>
+                        <input type="radio" id="payment-var-1" name="payment-var" class="delivery-form-block__radio" checked>
+                        <label class="delivery-form-block__label--radio" for="payment-var-1">Наличные</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="payment-var-2" name="payment-var" class="delivery-form-block__radio">
+                        <label class="delivery-form-block__label--radio" for="payment-var-2">Безналичный расчёт</label>
+                    </div>
+                </div>
+
+                <p class="delivery__sum">Сумма к оплате: <span>688 000 ₽</span></p>
+
+                <button class="button button--blue delivery-form-block__button">Оформить заказ</button>
+
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- / CONTENT -->
+
+
+<!-- FOOTER -->
+
+    <footer class="footer">
+        <div class="container footer__flex">
+            <div class="footer__left">
+                <p class="footer__subscribe-text">Подпишитесь на новостную рассылку BMW Motorrad</p>
+                <button class="button button--subscribe">Будьте в курсе</button>
+                <div class="socials footer__soc">
+                    <a href="#" class="socials__item">
+                        <span class="socials__icon"><img src="img/insta.svg" alt=""></span>
+                        <span class="socials__text">@bmw.kazan</span>
+                    </a>
+                </div>
+                <p class="footer__contacts">
+                    Контакты дилерского центра:<br>
+                    г. Казань, ул. Петербуржская, 50<br>
+                    +123 459 7890
+                </p>
+            </div>
+            <div class="column-menu footer__menu">
+                <div class="column-menu__col">
+                    <a href="https://www.bmw-motorrad.ru/" target="_blank" class="column-menu__link column-menu__link--external">BMW Russia</a>
+                    <a href="https://www.bmwgroup.com/en.html" target="_blank" class="column-menu__link column-menu__link--external">BMW Group</a>
+                    <a href="#" class="column-menu__link">Cookies</a>
+                    <a href="#" class="column-menu__link">Политика конфиденциальности</a>
+                    <a href="#" class="column-menu__link">Правовая информация</a>
+                </div>  
+            </div>
+        </div>
+    </footer>
+    <div class="bottom">
+        <div class="container bottom__flex">
+            <p class="bottom__copyright">© BMW AG 2019<br>Обратите внимание: Все мотоциклы поставляются с оборудованием, соответствующим требованиям законодательства (например, фильтрами выхлопных газов и боковыми отражателями). Фотографии и видеозаписи мотоциклов, представленных на этом сайте, могут незначительно отличаться от моделей для российского рынка.</p>
+            <div class="bottom__logo-slogan">
+                <div class="bottom__logo"><img src="img/bottom-logo.png" alt="logo" ></div>
+                <!-- Анимация будет при добавлении класса "bottom__slogan--lined" -->
+                <span class="bottom__slogan bottom__slogan--lined">MAKE LIFE A RIDE</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- / FOOTER -->
+
+    <!-- ЭТО СКРИПТЫ ЧИСТО ДЛЯ ТЕСТА НА ХЕРОКУ -->
+
+<script>
+    document.getElementsByClassName('header__menu-button')[0].onclick = function() {
+        const header = document.getElementsByClassName('header')[0];
+        const body = document.getElementsByClassName('body')[0];
+        if (!header.classList.contains('header--opened_menu')) {
+            header.classList.add('header--opened_menu');
+            body.classList.add('_lock');
+        }
+        else {
+            header.classList.remove('header--opened_menu');
+            body.classList.remove('_lock');
+        }
+    }
+    const var1 = document.getElementById("delivery-var-1");
+    const var2 = document.getElementById("delivery-var-2");
+    const address = document.getElementById("delivery__address");
+    const label = document.getElementById("label-address");
+    var2.onclick = function(){
+
+        if (var2.checked) {
+            address.disabled=true;
+            label.classList.add('delivery-form-block__label--disabled');
+            address.classList.add('delivery-form-block__input--disabled');
+
+        }
+    }
+
+    var1.onclick = function(){
+
+        if (var1.checked){
+           address.disabled=false;
+           label.classList.remove('delivery-form-block__label--disabled');
+           address.classList.remove('delivery-form-block__input--disabled');
+        }
+    }
+
+</script>
+
+</body>
+</html>

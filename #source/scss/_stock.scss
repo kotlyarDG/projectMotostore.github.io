@@ -1,0 +1,319 @@
+@import 'var';
+
+.container--stock {
+   width: 1050px;
+   margin: 0 auto;
+   max-width: 100%;
+
+   @media (max-width: $lg) {
+      max-width: 932px;
+   }
+
+   @media (max-width: $md) {
+      max-width: 708px;
+   }
+
+   @media (max-width: $xs) {
+      max-width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+   }
+}
+
+.content-stock{
+	padding: 43px 0 37px 0;
+}
+
+.stock {
+	
+
+	&__tittle {
+		font-family: $boldFont;
+		font-weight: bold;
+		@include adaptive-font(54,28);
+		color: $dark;
+	}
+
+	&__subtittle {
+		font-family: $boldFont;
+		font-weight: bold;
+		@include adaptive-font(42,18);
+		color: $dark;
+		margin: 27px 0 0 0;
+	}
+
+	&__text {
+		font-family: $regFont;
+		font-size: 18px;
+		line-height: 22px;
+		color: $dark;
+		margin: 27px 0 0 0;
+	}
+
+	&__model-tittle {
+		margin: 27px 0 0 0;
+		font-family: $boldFont;
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	&__model {
+		margin: 126px 0 0 0;
+	}
+
+	&__btns{
+		margin: 27px 0 0 0;
+
+		button{
+			margin: 0 24px 0 0;
+
+			@media (max-width: $md) {
+				margin: 0 24px 15px 0;
+			}
+
+			@media (max-width: $xs) {
+				margin: 0 0 15px 0;
+				display: block;
+				width: 100%;
+				text-align: center;
+			}
+
+			&:last-child{
+				margin: 0 0 0 0;
+			}
+		}
+	}
+
+	&__btn2{
+		padding: 0 30px;
+		
+		@media (max-width: $xs) {
+			padding: 0;
+		}
+		
+	}
+}
+.model {
+	padding: 0 15px;
+
+	&__row-main {
+		display: flex;
+		
+		@media (max-width: $xs) {
+			flex-direction: column;
+		}
+	}
+
+	&__slider {
+		flex: 0 1 48%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+	}
+
+	&__arrow {
+		display: block;
+		width: 33px;
+		height: 33px;
+		background-color: $blue;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		transition: 0.3s;
+
+		&:hover{
+			background-color: $dark;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		&--prev {
+
+		}
+
+		&--next {
+
+		}
+	}
+
+	&__slide {
+		margin: 0 10px 0 10px;
+		img {
+			max-width: 100%;
+		}
+
+	}
+
+	&__info {
+		flex: 0 1 52%;
+		display: flex;
+		flex-direction: column;
+
+		padding: 0 0 0 15%;
+
+		@media (max-width: $md){
+			padding: 0 0 0 5%;
+		}
+
+		@media (max-width: $xs){
+			margin: 20px 0 0 0;
+			text-align: center;
+		}
+		
+		color: $dark;
+	}
+
+	&__name {
+		font-family: $regFont;
+		font-size: 18px;
+		line-height: 21px;
+		
+		span{
+			font-family: $boldFont;
+			font-weight: bold;
+			display: inline-block;
+			margin: 0 0 0 10px;
+		}
+	}
+
+	&__common-info {
+		font-family: $regFont;
+		font-size: 16px;
+		line-height: 20px;
+		color: #000;
+		margin: 6px 0 0 0;
+	}
+
+	&__cost {
+		margin: 18px 0 0 0;
+		font-family: $regFont;
+		font-size: 18px;
+		line-height: 21px;
+
+		span {
+			font-family: $boldFont;
+			font-weight: bold;
+			display: inline-block;
+			margin: 0 0 0 10px;
+		}
+
+		&:after{
+			content: '';
+			width: 185px;
+			height: 4px;
+			display: block;
+			background-color: #919191;
+			margin: 6px 0 0 0;
+
+			@media (max-width: $xs){
+				margin: 6px auto 0 auto;
+			}
+		}
+	}
+
+	&__btn {
+		padding: 7px 13px;
+		background-color: $dark;
+		display: block;
+		width: 109px;
+		margin: 15px 0 0 0;
+
+		@media (max-width: $xs){
+			margin: 15px auto 0 auto;
+			width: 125px;
+		}
+
+		&:hover{
+			background-color: $blue;
+		}
+
+		
+		span {
+			font-family: $sloganFont;
+			font-weight: bold;
+			font-size: 12px;
+			line-height: 15px;
+			color: #fff;
+			position: relative;
+
+			&:after{
+				content: '';
+
+				display: inline-block;
+				width: 6px;
+				height: 10px;
+				background: url('../../img/stock/arrow-next.svg') center / cover no-repeat;
+				position: absolute;
+				top: 4px;
+				right: -15px;
+
+			}
+		}
+	}
+
+	&__row-items {
+		margin: 26px 0 0 0;
+		display: flex;
+
+		@media (max-width: $xs){
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		
+	}
+
+	&__item {
+		flex: 0 0 20%;
+		height: 128px;
+		padding: 0 6px;
+
+		&:first-child{
+			padding-left: 0;
+		}
+
+		&:last-child{
+			padding-right: 0;
+		}
+
+		@media (max-width: $xs){
+			flex: 0 1 50%;
+
+			padding: 0;
+			margin: 0 0 10px 0;
+			height: auto;
+
+			&:nth-child(odd){
+				padding: 0 5px 0 0;
+			}
+
+			&:nth-child(even){
+				padding: 0 0 0 5px;
+			}
+		}
+
+		@media (max-width: 440px){
+			flex: 0 1 100%;
+			&:nth-child(odd){
+				padding: 0 0 0 0;
+			}
+
+			&:nth-child(even){
+				padding: 0 0 0 0;
+			}
+
+		}
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+}

@@ -1,0 +1,141 @@
+@import "var";
+
+.first-screen--about{
+	background: url('../img/about/first-screen__bg.jpg') center / cover no-repeat;
+	height: 60vh;
+}
+
+.content-about {
+	background: #E5E5E5;
+
+	&__info {
+		padding: 70px 0 40px 0;
+		color: $dark;
+
+	}
+
+	&__tittle {
+		font-family: $boldFont;
+		font-weight: 800;
+		@include adaptive-font(54, 28);
+		// font-size: 54px;
+		// line-height: 59px;
+	}
+
+	&__subtittle {
+		font-family: $boldFont;
+		font-weight: bold;
+		@include adaptive-font(34, 21);
+
+		margin: 15px 0 0 0;
+	}
+
+	&__text {
+		font-family: $regFont;
+		font-size: 14px;
+		line-height: 17px;
+
+		margin: 30px 0 0 0;
+	}
+}
+
+.team {
+	background: #E5E5E5;
+	padding: 0 0 37px 0;
+
+	&__tittle {
+		width: 100%;
+		text-align: center;
+		font-family: $boldFont;
+		font-weight: bold;
+		@include adaptive-font(32, 22);
+
+		&:after{
+			content: '';
+			width: 92px;
+			height: 5px;
+			display: block;
+
+			margin: 7px auto 0 auto;
+
+			background-color: $dark;
+		}
+	}
+
+	&__items {
+		max-width: 860px;
+		margin: 42px auto 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		@media (max-width: $xs){
+			flex-direction: column;
+			align-items: center;
+		}
+
+	}
+
+	&__item {
+		display: flex;
+		align-items: flex-start;
+
+		flex: 0 1 40%;
+
+		@media (max-width: $sm){
+			flex: 0 1 50%;
+		}
+
+		&:first-child, &:nth-child(2){
+			margin: 0 0 60px 0;
+		}
+
+		@media (max-width: $xs){
+			margin: 0 0 60px 0;
+
+			&:last-child{
+				margin: 0 0 0 0;
+			}
+		}
+	}
+
+	&__photo {
+		width: 111px;
+		height: 111px;
+		border-radius: 50%;
+		margin: 0 33px 0 0;
+		flex: 0 0 40%;
+
+		img{
+			max-width: 100%;
+		}
+
+	}
+
+	&__info {
+		color: $dark;
+	}
+
+	&__name {
+		font-family: $boldFont;
+		font-weight: bold;
+		font-size: 20px;
+	}
+
+	&__position {
+		margin: 4px 0 10px 0;
+		font-family: $regFont;
+		font-size: 14px;
+		line-height: 17px;
+
+	}
+
+	&__contact {
+		display: block;
+		font-family: $boldFont;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 17px;
+		color: $dark;
+	}
+}
