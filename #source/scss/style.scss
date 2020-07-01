@@ -482,6 +482,8 @@ $angle: 360/$max; /* угол поворота каждого кружка от�
             color: $blue;
         }
     }
+
+
 }
 
 // Header
@@ -497,6 +499,8 @@ $angle: 360/$max; /* угол поворота каждого кружка от�
 @import 'delivery';
 
 @import 'stock';
+
+@import 'stock-detail';
 
 // Footer
 @import 'footer';
