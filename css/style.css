@@ -1142,7 +1142,6 @@ ul {
 	transition: 0.1s;
 	-ms-flex-negative: 0;
 	    flex-shrink: 0;
-	position: relative;
 }
 @media (max-width: 1199px) {
 	.catalog__cat {
